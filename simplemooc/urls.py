@@ -3,11 +3,7 @@ from django.contrib import admin
 from simplemooc.core.views import *
 
 urlpatterns = [
-    # Examples:
-    # url(r'^$', 'simplemooc.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
-
     url(r'^admin/', include(admin.site.urls)),	
-    url(r'$^', home, name='home')
-
+    url(r'^contact/$', 'simplemooc.core.views.contact', name='contact'),
+    url(r'^$', 'simplemooc.core.views.home', name='home'),
 ]
